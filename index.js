@@ -95,9 +95,190 @@ function functionWithArgs (param1, param2){
 
 
  //-----------------------------------------------------------------------Return a Value from a Function with Return 
+ //ex.1
  function timesFive(num){
     return num * 5;
   }
-  
   const myNum = timesFive(2);    //func ang nagsupply ng operation
-  console.log(myNum);
+  //console.log(myNum);
+
+  //ex.2
+  function plusThree(num) {
+    return num + 3;
+  }
+  const answer = plusThree(5);
+  //console.log(answer);
+
+
+//------------------------------------------------------------------------Understanding Undefined Value returned from a Function (if no return args)
+//ex.1
+let sum = 0;
+
+function addThree(sum) {
+  return sum + 3;
+}
+
+function addFive(sum) {
+  return sum + 5;
+}
+
+let addThreeValue = addThree(3);
+let addFiveValue = addFive();
+
+//console.log(addThreeValue);
+//console.log(addFiveValue);
+
+//ex.2
+function processArg(num) {
+  return (num + 3) / 5;
+}
+processed = processArg(7);
+//console.log(processed);
+
+
+//--------------------------------------------------------------------------Stand in Line
+function nextInLine(arr, item) {
+  // Only change code below this line
+  arr.push(item) //value is [1, 2, 3, 4, 5, 6]
+  return arr.shift();
+  // Only change code above this line
+}
+
+// Setup
+const testArr = [1, 2, 3, 4, 5];
+const testArr2 = ["a","b","c","d"];
+
+// Display code
+/*
+console.log("Before: " + JSON.stringify(testArr)); //nilabas lang yung testArr na variable before tinawag yung function.
+console.log(nextInLine(testArr, 6)); //called func nextInLine then filled params and the run args and return 1 because shift method is used which is to return the 1st value of the array
+console.log("After: " + JSON.stringify(testArr));
+
+console.log(nextInLine(testArr2, "e"));
+console.log("Next Example" + JSON.stringify(testArr2))
+*/
+
+
+//----------------------------------------------------------------------Use Conditional Logic with If Statements
+//ex.1
+function trueOrFalse(wasThatTrue) {
+  // Only change code below this line
+  if(wasThatTrue){
+    return "Yes, that was true";
+  }
+  return "No, that was false";
+  // Only change code above this line
+}
+
+//console.log(trueOrFalse(true));
+
+//---------------------------------------------------------------------------Comparison with the Equality Operator
+function trueOrFalse(wasThatTrue) {
+  // Only change code below this line
+  if(wasThatTrue == "Hi"){
+    return "Yes, that was true";
+  }
+  return "No, that was false";
+  // Only change code above this line
+}
+
+//console.log(trueOrFalse("Hello"));
+//console.log(testEqual("Hello")); //it is fine to have console here even func is below it.
+
+function testEqual(val) {
+  if (val == 12) { // Change this line
+    return "Equal";
+  }
+  return "Not Equal";
+}
+
+//----------------------------------------------------------------------Practice comparing different values
+function compareEquality(a,b){
+  if (a === b){
+    return "equal";
+  }
+  return "not equal";
+}
+
+//console.log(compareEquality(1,"1"));
+
+//----------------------------------------------------------------------Comparison with the Inequality Operator
+function negativeEquality(a,b){
+  if(a != b){
+    return "incorrect password";
+  }
+  return "password accepted";
+}
+//console.log(negativeEquality(1,1));
+
+
+//----------------------------------------------------------------------Comparison with the Greater Than Operator
+function greaterThan(value){
+  if (value > 100){
+    return "over 100";
+  }
+
+  if (value > 200){
+    return "over 200";
+  }
+
+  return "under 100";
+}
+//console.log(greaterThan(20));
+//console.log(greaterThan(201));
+
+//------------------------------------------------------------------------Comparison with the Greater Than Or Equal To Operator
+function greaterThanOrEqualTo(value){
+  if (value >= 10){
+    return "equal or greater than 10";
+  }
+
+  if(value >= 50){
+    return "equal or greater than 50";
+  }
+
+  return "less than 5";
+}
+//console.log(greaterThanOrEqualTo(3));
+
+
+//-------------------------------------------------------------------------Comparison with the Less Than To Operator
+function lessThan(value){
+  if(value < 10){
+    return "less than 10";
+  }
+
+  if(value < 20){
+    return "less than 20";
+  }
+
+  return "more than 20";
+}
+//console.log(lessThan(10));
+
+
+//-------------------------------------------------------------------------Comparison with the Less Than Or Equal To Operator
+function lessThanOrEaualTo(value){
+  if(value <= 10){
+    return "less than or equal to 10";
+  }
+
+  if(value <= 20){
+    return "less than or equal to 20";
+  }
+  return "more than 20";
+}
+//console.log(lessThanOrEaualTo(21));
+
+
+//----------------------------------------------------------------------------
+//nested if statement
+function logicalAndOperator(value){
+  if(value >=10){
+    if(value <=20){
+      return "greater than 10 less than 20";
+    }
+  }
+  return "more than 20"
+}
+console.log(logicalAndOperator(21));
