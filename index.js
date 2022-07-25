@@ -281,4 +281,42 @@ function logicalAndOperator(value){
   }
   return "more than 20"
 }
-console.log(logicalAndOperator(21));
+//console.log(logicalAndOperator(21));
+
+//---------------------------------------------------------------------------Introducing Else Statements
+//ex.1
+function ifElse(params){
+  let reult = "";
+  if (params > 5){
+    result = "hey you are over five";
+  } else{
+    result = "hey you are less than five";
+  }
+  return result;
+}
+//console.log(ifElse(2));
+
+//ex.2
+function ifElseNum(value){
+  if(value >= 5 && value <= 10){
+    return "hey you got " + value;
+  }
+  else {
+    return "hey please input another value";
+  }
+}
+//console.log(ifElseNum(11));
+
+//-------------------------------------------------------------------------------Introducing Else If Statements
+function ifElseStatement(value){
+  if (value >= 5){
+    return "hey you got average value of " + value;
+  }
+  else if (value <= 5){
+    return "hey you got poor value of "+ value;
+  }
+  else{
+    return "incorrect input";
+  }
+}
+console.log(ifElseStatement("3"));
