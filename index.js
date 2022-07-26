@@ -319,4 +319,68 @@ function ifElseStatement(value){
     return "incorrect input";
   }
 }
-console.log(ifElseStatement("3"));
+//console.log(ifElseStatement("3"));
+
+
+//--------------------------------------------------------------------------------Chaining If Else Statements
+function testSize(value){
+  if (value == 5){
+    return "your value is "+ value;
+  } else if(value ==10){
+    return "your value is "+ value;
+  } else if (value == 15){
+    return "your value is "+ value;
+  }
+  else{
+    return "Hey your "+value + " is invalid";
+  }
+}
+
+//console.log(testSize(5));
+
+//-----------------------------------------------------------------------Golf Code
+const names = ["Hole-in-one!", "Eagle", "Birdie", "Par", "Bogey", "Double Bogey", "Go Home!"];
+
+function golfScore(par, strokes) {
+  // Only change code below this line
+  if (strokes === 1){
+    return names[0];
+  } else if (strokes <= par-2){
+    return names[1];
+  } else if ( strokes === par-1){
+    return names[2];
+  } else if (strokes === par){
+    return names[3];
+  } else if (strokes === par +1){
+    return names[4];
+  } else if (strokes === par +2){
+    return names[5];
+  } else if (strokes >= par +3){
+    return names[6];
+  } else {
+      return "Change Me";
+  }
+  // Only change code above this line
+}
+//console.log(golfScore(5, 4));
+
+//--------------------------------------------------------------------------Selecting from Many Options with Switch Statements
+function caseInSwitch(val) {
+  let answer = "";
+  switch (val){
+    case 1:
+      return "alpha";
+      break;
+    case 2:
+      return "beta";
+      break;
+    case 3:
+      return "gamma";
+      break;
+    case 4:
+      return "delta";
+      break;
+  }
+  return answer;
+}
+console.log(caseInSwitch(2));
