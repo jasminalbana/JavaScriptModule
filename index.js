@@ -368,19 +368,108 @@ function golfScore(par, strokes) {
 function caseInSwitch(val) {
   let answer = "";
   switch (val){
-    case 1:
+    case "a":
       return "alpha";
       break;
-    case 2:
+    case "b":
       return "beta";
       break;
-    case 3:
+    case "c":
       return "gamma";
       break;
-    case 4:
+    case "d":
       return "delta";
       break;
   }
   return answer;
 }
-console.log(caseInSwitch(2));
+//console.log(caseInSwitch("d"));
+
+//--------------------------------------------------------------------------Multiple Identical Options in Switch Statements
+
+function sequentialSizes(val) {
+ let answer = "";
+  switch(val){
+    case 1:
+    case 2:
+    case 3:
+      answer = "Low";
+      break;
+    case 4:
+    case 5:
+    case 6:
+      answer = "Mid";
+      break;
+    case 7:
+    case 8:
+    case 9:
+      answer = "High";
+      break;
+  }
+  return answer;
+}
+
+//console.log(sequentialSizes(1));
+
+//--------------------------------------------------------------------------Returning Boolean Values from Functions
+
+function isLess(a, b) {
+  return a < b;
+}
+
+//console.log(isLess(10, 15));
+
+//--------------------------------------------------------------------------Counting Cards
+
+let count = 0;
+
+function cc(card) {
+  // Only change code below this line
+  switch (card) {
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+      count++;
+      break;
+    case 7:
+    case 8:
+    case 9: 
+      count+0;
+      break;
+    case 10:
+    case "J":
+    case "Q":
+    case "K":
+    case "A":
+      count--;   
+      break;
+  }
+
+//if (count <= 0){
+ // return console.log(count + " Hold");} 
+//else {return console.log(count+" Bet");
+
+}
+  // Only change code above this line
+//}
+
+cc(7); 
+cc(8); 
+cc(9); 
+
+
+//--------------------------------------------------------------------------Counting Cards
+
+const testObj = {
+  "hat": "ballcap",
+  "shirt": "jersey",
+  "shoes": "cleats"
+};
+
+// Only change code below this line
+console.log(testObj.hat);      // Change this line
+console.log(testObj.shirt);    // Change this line
+
+
