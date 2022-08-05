@@ -462,14 +462,26 @@ cc(9);
 
 //--------------------------------------------------------------------------Counting Cards
 
+//const testObj = {
+ // "hat": "ballcap",
+ // "shirt": "jersey",
+ // "shoes": "cleats"
+//};
+
+// Only change code below this line
+//console.log(testObj.hat);      // Change this line
+//console.log(testObj.shirt);    // Change this line
+
+//--------------------------------------------------------------------------Accessing Object Properties with Bracket Notation
+
 const testObj = {
-  "hat": "ballcap",
-  "shirt": "jersey",
-  "shoes": "cleats"
+  "an entree": "hamburger",
+  "my side": "veggies",
+  "the drink": "water"
 };
 
 // Only change code below this line
-console.log(testObj.hat);      // Change this line
-console.log(testObj.shirt);    // Change this line
-
-
+const entreeValue = testObj["an entree"];   
+const drinkValue = testObj["the drink"];   
+console.log(testObj["an entree"]);
+console.log(drinkValue);
