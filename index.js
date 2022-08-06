@@ -481,7 +481,76 @@ const testObj = {
 };
 
 // Only change code below this line
-const entreeValue = testObj["an entree"];   
-const drinkValue = testObj["the drink"];   
-console.log(testObj["an entree"]);
-console.log(drinkValue);
+//const entreeValue = testObj["an entree"];   
+//const drinkValue = testObj["the drink"];   
+//console.log(testObj["an entree"]);
+//console.log(drinkValue);
+
+//--------------------------------------------------------------------------Updating Object Properties
+
+const myDog = {
+  "name": "Coder",
+  "legs": 4,
+  "tails": 1,
+  "friends": ["freeCodeCamp Campers"]
+};
+
+myDog.name = "Happy Coder"
+//console.log(myDog.name);
+
+
+//--------------------------------------------------------------------------Add New Properties to a JavaScript Object
+
+myDog.bark = "woof";
+//console.log(myDog.bark);
+
+myDog.talent = "sit";
+//console.log(myDog.talent);
+
+//delete myDog.tails;
+
+//--------------------------------------------------------------------------Using Objects for Lookups
+
+function phoneticLookup(val) {
+  let result = "";
+
+
+  var lookup = {
+    "alpha": "Adams",
+    "bravo": "Boston",
+    "charlie":"Chicago",
+    "delta": "Denver",
+    "echo": "Easy",
+    "foxtrot":"Frank",
+  }
+
+ result = lookup[val]
+
+
+  //return console.log(result);
+}
+
+phoneticLookup("charlie");
+
+//--------------------------------------------------------------------------Testing Objects for Properties
+
+var obj = {
+  "alpha": "Adams",
+  "bravo": "Boston",
+  "charlie":"Chicago",
+  "delta": "Denver",
+  "echo": "Easy",
+  "foxtrot":"Frank",
+};
+
+
+function checkObj(love, checkProp) {
+
+  if (love.hasOwnProperty(checkProp)) {
+    return console.log(love[checkProp]);
+  } else {
+    return console.log("Not Found");
+  }
+}
+
+checkObj(obj,"echo");
