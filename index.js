@@ -547,10 +547,43 @@ var obj = {
 function checkObj(love, checkProp) {
 
   if (love.hasOwnProperty(checkProp)) {
-    return console.log(love[checkProp]);
+    //return console.log(love[checkProp]);
   } else {
-    return console.log("Not Found");
+   // return console.log("Not Found");
   }
 }
 
 checkObj(obj,"echo");
+
+
+//--------------------------------------------------------------------------Accessing Nested Arrays
+
+const myPlants = [
+  {
+    type: "flowers",
+    list: [
+      "rose",
+      "tulip",
+      "dandelion"
+    ]
+  },
+  {
+    type: "trees",
+    list: [
+      "fir",
+      "pine",
+      "birch"
+    ]
+  }
+];
+
+function AccArray(nestedArrayOp){
+  if (myPlants.includes(nestedArrayOp)){
+    return console.log(nestedArrayOp);
+  }else{
+    return console.log("not found");
+  }
+}
+ AccArray(myPlants[0].list[0]);
+
+
