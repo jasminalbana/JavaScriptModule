@@ -579,11 +579,93 @@ const myPlants = [
 
 function AccArray(nestedArrayOp){
   if (myPlants.includes(nestedArrayOp)){
-    return console.log(nestedArrayOp);
+  //  return console.log(nestedArrayOp);
   }else{
-    return console.log("not found");
+  //  return console.log("not found");
   }
 }
- AccArray(myPlants[0].list[0]);
+// AccArray(myPlants[0].list[0]);
+
+//--------------------------------------------------------------------------Record Collection
+
+ // Setup
+const recordCollection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold',
+    
+    
+  }
+};
+
+// Only change code below this line
+function updateRecords(records, id, prop, value) {
+  if (prop !== 'tracks' && value !== ""){
+    records[id][prop] = value;
+  }
+  else if(prop !=='trackss' && records[id].hasOwnProperty('trackss')){  //not to be executed bcoz no "tracks" property in records array. Conflict with the next if statement
+    records[id][prop] = value;
+  }else if(prop === 'tracks' && value !== ""){ 
+    records[id][prop].push(value);
+  }else if (value === ""){
+    delete records[id][prop];
+  }
+  
+  return console.log(records);
+}
+
+//updateRecords(recordCollection, 5439, 'tracks', 'hi');
+//updateRecords(recordCollection, 5439, 'tracks', 'hello');
+//updateRecords(recordCollection, 5439, 'tracks1', 'Jasmin');
 
 
+
+function updateRecords1(records, id, prop, value) {
+  if (value === '') {
+    delete records[id][prop];
+  } else if (prop === 'tracks') {
+    records[id][prop] = records[id][prop] || []; // this is called shortcircuit evaluation, see below for explanation
+    records[id][prop].push(value);
+  } else {
+    records[id][prop] = value;
+  }
+//  return console.log(records);
+}
+
+updateRecords1(recordCollection, 5439, 'tracks', 'hi');
+updateRecords1(recordCollection, 5439, 'tracks', 'hello');
+updateRecords1(recordCollection, 5439, 'tracks1', 'Jasmin');
+
+
+//--------------------------------------------------------------------------Iterate with JavaScript While Loops
+
+const arrayMine = [];
+let i = 5;
+while(i >= 0){
+  arrayMine.push(i);
+  i--;
+}
+//console.log(arrayMine);
+
+
+//--------------------------------------------------------------------------Iterate with JavaScript For Loops
+// Setup
+const mineArray = [];
+for (let i = 1; i <= 5; i++){
+  mineArray.push(i);
+}
+
+console.log(mineArray);
