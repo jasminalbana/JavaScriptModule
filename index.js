@@ -668,4 +668,44 @@ for (let i = 1; i <= 5; i++){
   mineArray.push(i);
 }
 
-console.log(mineArray);
+//console.log(mineArray);
+
+
+
+const arr = [10, 9, 8, 7, 6];
+
+for (let i = 0; i < arr.length; i++) {
+  // console.log(arr[i]);
+}
+
+
+
+//--------------------------------------------------------------------------Iterate Through an Array with a For Loop
+
+const myArr = [2, 3, 4, 5, 6];
+
+// Only change code below this line
+let total = 0;
+for (let i = 0; i < myArr.length; i++){
+    total += myArr[i];
+}
+//console.log(total);
+
+//--------------------------------------------------------------------------Nesting For Loops
+
+function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+  for (let i = 0; i < arr.length; i++) {  
+    
+    for (let j = 0; j < arr[i].length; j++) {
+      product *= arr[i][j];
+    }
+  }
+  // Only change code above this line
+  return console.log(product);
+}
+
+multiplyAll([[1,2,3],[2,1]]);
+
+
