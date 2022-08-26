@@ -827,6 +827,92 @@ function randomWholeNum() {
   return console.log(Math.floor(Math.random() * 10));
 }
 
-randomWholeNum();
+//randomWholeNum();
+
+//-------------------------------------------------------------------------Generate Random Whole Numbers with a range
 
 
+function randomRange(myMin, myMax) {
+  // Only change code below this line
+  return console.log(Math.floor(Math.random()*(myMax- myMin +1)+ myMin));
+  // Only change code above this line
+}
+
+//randomRange(5,10);
+
+
+//-------------------------------------------------------------------------Use the parseInt Function
+
+function convertToInteger(str) {
+
+  return console.log(parseInt(str));
+  
+  }
+  
+  //convertToInteger("56");
+
+
+  //-------------------------------------------------------------------------short hand
+
+  function checkEqual (a,b){
+    return a == b ? console.log("Equal") : console.log("Not Equal");
+  }
+
+ // checkEqual(5,5)
+  
+
+ //------------------------------------------------------------------------Use Multiple Conditional (Ternary) Operators
+
+  function checkSign(num){
+    return (num == 0) ? console.log(num + " is zero")
+      : (num > 0) ? console.log(num + " is a positive number")
+      : console.log(num + " is a negative number");
+  }
+
+  //checkSign(0);
+
+
+  function countup(n) {
+    if (n < 1) {
+      return [];
+    } else {
+      const countArray = countup(n - 1);
+      countArray.push(n);
+      return countArray;
+    }
+  }
+  //console.log(countup(5));
+
+// program to count down numbers to 1
+function countDown(number) {
+
+  // display the number
+  console.log(number);
+
+  // decrease the number value
+  const newNumber = number - 1;
+
+  // base case
+  if (newNumber > 0) {
+      countDown(newNumber);
+  }
+}
+
+//console.log(countDown(4));
+
+
+
+ //------------------------------------------------------------------------Use Recursion to Create a Range of Numbers
+
+ function rangeOfNumbers(startNum, endNum) {
+  if(endNum < startNum ){
+    return [];
+  }else {
+    const number = rangeOfNumbers (startNum , endNum -1);
+    number.push(endNum);
+    return number;
+  }
+
+};  
+
+console.log(rangeOfNumbers(4,10));
