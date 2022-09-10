@@ -83,4 +83,90 @@ let rickyAndCal = "Cal and Ricky both like racing.";
 let calRegex = /^Cal/; // Change this line
 let result10 = calRegex.test(rickyAndCal);
 
-console.log(result10);
+//console.log(result10);
+
+//-------------------------------------------------Match All Letters and Numbers
+
+let quoteSample4 = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/g; // Change this line
+let result11 = quoteSample.match(alphabetRegexV2).length;
+
+
+//console.log(result11);
+
+//-------------------------------------------------Match Everything But Letters and Numbers
+let quoteSample5 = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/g; // Change this line
+let result12 = quoteSample.match(nonAlphabetRegex);
+
+//console.log(result12);
+
+//-------------------------------------------------Match All Numbers
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/g; // Change this line
+let result13 = movieName.match(numRegex).length;
+
+//console.log(result13);
+
+//-------------------------------------------------Match All Non-Numbers
+let movieName2 = "2001: A Space Odyssey";
+let noNumRegex = /\D/g; // Change this line
+let result14 = movieName.match(noNumRegex);
+
+//console.log(result14);
+
+//-------------------------------------------------Match Non-Whitespace Characters
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/g; // Change this line
+let result15 = sample.match(countNonWhiteSpace);
+
+//console.log(result15);
+
+
+//-------------------------------------------------Specify Upper and Lower Number of Matches
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; // Change this line
+let result16 = ohRegex.test(ohStr);
+
+//console.log(result16);
+
+
+let favWord = "favorite";
+let favRegex = /favou?rite/; // Change this line
+let result17 = favRegex.test(favWord);
+
+//console.log(result17);
+
+
+let quit = "qu";
+let noquit = "qt";
+let quRegex= /q(?=u)/;
+let qRegex = /q(?!u)/;
+let a1 = quit.match(quRegex);
+let a2 = noquit.match(qRegex);
+
+//console.log(a1);
+
+
+let repeatNum = "42 42 42";
+let reRegex = /^(\d+)\s\1\s\1$/; // Change this line
+let result18 = reRegex.test(repeatNum);
+
+//console.log(result18);
+
+//-------------------------------------------------Use Capture Groups to Search and Replace
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result19 = str.replace(fixRegex, replaceText);
+
+//console.log(result19);
+
+
+//------------------------------------------------Remove Whitespace from Start and End
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result20 = hello.replace(wsRegex, ""); // Change this line
+
+
+console.log(result20);
